@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html>
+<head>
+    <title>Starbucks Cashier App</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+<h1 align="center">STARBUCKS CASHIER WEB APP</h1>
+
+<!-- Logout -->
+<a href="/login"><button>Log out</button></a>
+
+<!-- Starbucks Section -->
+<form name="form" th:object="${command}" method="post" action="#" th:action="@{/}">
+
+    <input type="hidden" name="state" id="state" value="{{state}}" />
+    <input type="hidden" name="ts" id="ts" value="{{ts}}" />
+    <input type="hidden" name="hash" id="hash" value="{{hash}}" />
+
+    <div align="center">
+        <textarea name="message" cols="50" rows="13" readonly id="message" th:text ="${message}" ></textarea>
+    </div>
+
+    <div align="center">
+        <label for="register">Select Store:</label>
+        <select name="register" id="register" th:field="*{register}">
+          <option value="5012349">Dub-C (5012349)</option>
+          <option value="1234567">Dub-B (1234567)</option>
+          <option value="7654321">Dub-A (7654321)</option>
+        </select> 
+    </div>   
+
+    <div align="center">
+        <br/>
+        <div>
+            <label for="drink">Select Drink:</label>
+            <select name="drink" id="drink" th:field="*{drink}">
+                <option value="Caffe Latte">Caffe Latte</option>
+                <option value="Caffe Americano">Caffe Americano</option>
+                <option value="Caffe Mocha">Caffe Mocha</option>
+                <option value="Espresso">Espresso</option>
+                <option value="Cappuccino">Cappuccino</option>
+            </select>
+        </div>
+        <br/>
+        <div>
+            <label for="size">Select Size:</label>
+            <select name="size" id="size" th:field="*{size}">
+                <option value="Short">Short</option>
+                <option value="Tall">Tall</option>
+                <option value="Grande">Grande</option>
+                <option value="Venti">Venti</option>
+                <option value="Your Own Cup">Your Own Cup</option>
+            </select>
+        </div>
+        <br/>
+        <div>
+            <label for="milk">Milk Type:</label>
+            <select name="milk" id="milk" th:field="*{milk}">
+                <option value="Whole">Whole</option>
+                <option value="Soy">Soy</option>
+                <option value="Nonfat">Non-fat</option>
+                <option value="Almond">Almond</option>
+                <option value="2%">2%</option>
+            </select>
+        </div>
+        <br/>
+        <p align="center">
+            <input type="submit" name="action" id="btnGetOrder" value="Get Order">
+            <input type="submit" name="action" id="btnPlaceOrder" value="Place Order">
+            <input type="submit" name="action" id="btnClearOrder" value="Clear Order">
+        </p>
+        <p align="center"><img src="\images\starbucks.png"></p>
+    </div>
+</form>
+
+<!-- END FORM SECTION -->
+
+</body>
+
+</html>

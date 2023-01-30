@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cashier-web-app-deployment
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      name: cashier-web-app
+  replicas: 3 # tells deployment to run 3 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      # unlike pod.yaml, the name is not included in the meta data as a unique name is
+      # generated from the deployment name
+      labels:
+        name: cashier-web-app
+    spec:
+      containers:
+        - name: cashier-web-app
+          image: abahror/cashier-web-app:2.2
+          ports:
+            - containerPort: 8081
