@@ -2,10 +2,10 @@
 
 This is the end-to-end project for CMPE 172 (Enterprise Software Development) at the San Jose State University, Spring 2023. This a multi-tear end-to-end project that consists of the following components:
 
-    * A web application that allows cashiers to manage their customers' orders (Cashier's app)
-    * A mobile application that allows customers to pay for their orders (Starbucks app)
-    * A Starbucks API that handles the requests from the Cashier's app and the Starbucks app
-    * A database that stores the information of the orders and cards
+* A web application that allows cashiers to manage their customers' orders (Cashier's app)
+* A mobile application that allows customers to pay for their orders (Starbucks app)
+* A Starbucks API that handles the requests from the Cashier's app and the Starbucks app
+* A database that stores the information of the orders and cards
 
 ## Architecture
 
