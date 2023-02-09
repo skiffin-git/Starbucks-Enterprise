@@ -1,12 +1,11 @@
 # CMPE 172 Starbucks Project
 
 This is the end-to-end project for CMPE 172 (Enterprise Software Development) at the San Jose State University, Spring 2023. This a multi-tear end-to-end project that consists of the following components:
+
     - A web application that allows cashiers to manage their customers' orders (Cashier's app)
     - A mobile application that allows customers to pay for their orders (Starbucks app)
     - A Starbucks API that handles the requests from the Cashier's app and the Starbucks app
     - A database that stores the information of the orders and cards
-
-<br>
 
 ## Architecture
 
@@ -19,7 +18,3 @@ Here is the architecture diagram of this project:
 The Cashier app and especially Starbucks API are scalable, have multiple pods. They can handle million user requests, and load balancer helps to distribute the requests to the pods (external load balancer for the cashiers and Kong's internal load balancer for all requests that go to Starbucks API). However, there is a limitation to the number of active orders. There can only be one active order for one register at the time, and if a request for placing a new order into register is sent, it will be rejected and will not be processed, and it does not depend on the pods, since all API pods get data only from the database and do NOT have static data (I removed the activeOrders hashmap and udpated the code).
 
 This can be improved further if RabbitMQ is added to the play. For instance, we could send place order requests to the RabbitMQ queue first, and orders will be there on hold, awaiting for their turn. Then, the API will get the next order from the queue for the registry and make it active, until there are no more orders in the queue. Unfortunately, due to time constraints, I had no time to implement RabbitMQ.
-
-All other necessary tech stack required for the project was used accordingly, and below, in the journal, you can find more about how the project was built.
-
-<br>
