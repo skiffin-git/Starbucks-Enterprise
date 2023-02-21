@@ -1,4 +1,4 @@
-# CMPE 172 Starbucks Project
+# Enterprise Software - Starbucks Project
 
 ## This a multi-tear end-to-end project that consists of the following components:
 
