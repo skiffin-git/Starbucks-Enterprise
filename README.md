@@ -7,7 +7,8 @@ This is the end-to-end project for Capstone Experience Program at the San Jose S
 * Web application that allows cashiers to manage their customers' orders (Cashier's app)
 * Mobile application that allows customers to pay for their orders (Starbucks app)
 * Starbucks API that handles the requests from the Cashier's app and the Starbucks app
-* Database that stores the information of the orders and cards
+* Load Balancer and KONG API Gateway
+* Database that stores the information of the orders and cards on GCP
 
 ## Architecture
 
