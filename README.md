@@ -1,4 +1,4 @@
-# Enterprise Software - Starbucks Project
+# Starbucks - Enterprise Software Project
 
 ## This a multi-tear end-to-end project that consists of the following components:
 
