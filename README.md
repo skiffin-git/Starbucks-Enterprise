@@ -2,7 +2,7 @@
 
 This is the end-to-end project for Capstone Experience Program at the San Jose State University, Summer 2022. 
 
-##This a multi-tear end-to-end project that consists of the following components:
+## This a multi-tear end-to-end project that consists of the following components:
 
 * A web application that allows cashiers to manage their customers' orders (Cashier's app)
 * A mobile application that allows customers to pay for their orders (Starbucks app)
